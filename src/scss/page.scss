@@ -1,0 +1,99 @@
+/*
+ * answer
+*/
+
+$POINT :#f27935;
+
+.row-aligner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo {
+    &__wrapper {
+        margin: 0 auto;
+    }
+
+    &__input {
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+
+        &--select {
+            width: 60px;
+        }
+
+        &--input {
+            width: calc(100% - 140px);
+            padding-left: 10px;
+        }
+
+        &--button {
+            width: 80px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $POINT;
+            color: #fff;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+        }
+
+    }
+
+    &__filter {
+        &--wrapper {
+            padding: 5px 10px;
+            background: #eee;
+        }
+
+        &--button {
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            margin: 0 10px 5px 0;
+            background: #fff;
+
+            &.selected {
+                background: $POINT;
+            }
+        }
+    }
+
+    &__item {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+
+        &--checkbox {
+            width: 40px;
+        }
+
+        &--sorting-button {
+            width: 40px;
+            background: #ddd;
+            height: 50px;
+            margin: 0 0 0 auto;
+        }
+
+        &--info {
+            span {
+                display: block;
+                font-size: 13px;
+                color: #aaa;
+                margin-bottom: 3px;
+            }
+
+            p {
+                color: #222;
+                margin-top: 10px;
+
+                &.complete {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
